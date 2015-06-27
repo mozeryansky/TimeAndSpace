@@ -16,6 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Create a reference to a Firebase location
+        var ref = Firebase(url:"https://time-and-space.firebaseio.com")
+        
+        ref.authAnonymouslyWithCompletionBlock { (error: NSError!, auth: FAuthData!) -> Void in
+            println(error);
+            println(auth);
+        }
+        
+        // Write data to Firebase
+        ref.setValue("Do you have data? You'll love Firebase.")
+        
+        // Read data and react to changes
+        ref.observeEventType(.Value, withBlock: {
+            snapshot in
+            println("\(snapshot.key) -> \(snapshot.value)")
+        })
+        
         return true
     }
 

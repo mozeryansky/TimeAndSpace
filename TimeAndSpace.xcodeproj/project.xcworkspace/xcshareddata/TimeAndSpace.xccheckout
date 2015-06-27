@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A986A672-92AF-4ED7-AB89-1CFF436329F1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TimeAndSpace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>26ADE17BB5134EE628614B5F28D942FC3967A130</key>
+		<string>https://github.com/mozeryansky/TimeAndSpace.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TimeAndSpace.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>26ADE17BB5134EE628614B5F28D942FC3967A130</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mozeryansky/TimeAndSpace.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>26ADE17BB5134EE628614B5F28D942FC3967A130</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>26ADE17BB5134EE628614B5F28D942FC3967A130</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TimeAndSpace</string>
+		</dict>
+	</array>
+</dict>
+</plist>

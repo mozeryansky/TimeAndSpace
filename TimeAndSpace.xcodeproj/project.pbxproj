@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		905694D8C2C3389604E3EB49 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 642E8A9158791BBD260B51D6 /* libPods.a */; };
 		D1E272761B3E9969001A921A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E272751B3E9969001A921A /* AppDelegate.swift */; };
 		D1E272781B3E9969001A921A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E272771B3E9969001A921A /* ViewController.swift */; };
 		D1E2727B1B3E9969001A921A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E272791B3E9969001A921A /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C490C5A1801348642A6B140 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		642E8A9158791BBD260B51D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17773B81B3F480000218FCC /* TimeAndSpace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeAndSpace-Bridging-Header.h"; sourceTree = "<group>"; };
 		D1E272701B3E9969001A921A /* TimeAndSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAndSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E272741B3E9969001A921A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E272751B3E9969001A921A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 		D1E272851B3E9969001A921A /* TimeAndSpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeAndSpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E2728A1B3E9969001A921A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E2728B1B3E9969001A921A /* TimeAndSpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndSpaceTests.swift; sourceTree = "<group>"; };
+		DF5BA59DA43D9CCC2E5AD0D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905694D8C2C3389604E3EB49 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +62,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E31254524612DA1842098CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF5BA59DA43D9CCC2E5AD0D1 /* Pods.debug.xcconfig */,
+				3C490C5A1801348642A6B140 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D17773BB1B3F4B9C00218FCC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1E2727C1B3E9969001A921A /* Images.xcassets */,
+				D1E2727E1B3E9969001A921A /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		D1E272671B3E9968001A921A = {
 			isa = PBXGroup;
 			children = (
 				D1E272721B3E9969001A921A /* TimeAndSpace */,
 				D1E272881B3E9969001A921A /* TimeAndSpaceTests */,
 				D1E272711B3E9969001A921A /* Products */,
+				5E31254524612DA1842098CA /* Pods */,
+				E4050435EC4C48747C53882D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +103,10 @@
 		D1E272721B3E9969001A921A /* TimeAndSpace */ = {
 			isa = PBXGroup;
 			children = (
+				D1E272791B3E9969001A921A /* Main.storyboard */,
 				D1E272751B3E9969001A921A /* AppDelegate.swift */,
 				D1E272771B3E9969001A921A /* ViewController.swift */,
-				D1E272791B3E9969001A921A /* Main.storyboard */,
-				D1E2727C1B3E9969001A921A /* Images.xcassets */,
-				D1E2727E1B3E9969001A921A /* LaunchScreen.xib */,
+				D17773BB1B3F4B9C00218FCC /* Resources */,
 				D1E272731B3E9969001A921A /* Supporting Files */,
 			);
 			path = TimeAndSpace;
@@ -90,6 +115,7 @@
 		D1E272731B3E9969001A921A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D17773B81B3F480000218FCC /* TimeAndSpace-Bridging-Header.h */,
 				D1E272741B3E9969001A921A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -112,6 +138,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4050435EC4C48747C53882D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				642E8A9158791BBD260B51D6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1E2728F1B3E9969001A921A /* Build configuration list for PBXNativeTarget "TimeAndSpace" */;
 			buildPhases = (
+				5941FCDA7AF55EDFEAFC67FF /* Check Pods Manifest.lock */,
 				D1E2726C1B3E9969001A921A /* Sources */,
 				D1E2726D1B3E9969001A921A /* Frameworks */,
 				D1E2726E1B3E9969001A921A /* Resources */,
+				ABCC9BB31E0FF6AFAD96B784 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +242,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5941FCDA7AF55EDFEAFC67FF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ABCC9BB31E0FF6AFAD96B784 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1E2726C1B3E9969001A921A /* Sources */ = {
@@ -340,21 +409,28 @@
 		};
 		D1E272901B3E9969001A921A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF5BA59DA43D9CCC2E5AD0D1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TimeAndSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TimeAndSpace/TimeAndSpace-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D1E272911B3E9969001A921A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C490C5A1801348642A6B140 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TimeAndSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TimeAndSpace/TimeAndSpace-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +487,7 @@
 				D1E272911B3E9969001A921A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1E272921B3E9969001A921A /* Build configuration list for PBXNativeTarget "TimeAndSpaceTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +496,7 @@
 				D1E272941B3E9969001A921A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

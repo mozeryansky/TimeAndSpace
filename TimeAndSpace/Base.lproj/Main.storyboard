@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimeAndSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URH-hL-jw6">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.31443339650000002" green="0.31443339650000002" blue="0.31443339650000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="CMn-l3-z0n"/>
+                                    <constraint firstAttribute="height" constant="40" id="URC-AX-2M4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="Explore">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="exploreButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdz-QF-ALb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNg-06-93F">
+                                <rect key="frame" x="0.0" y="480" width="300" height="80"/>
+                                <color key="backgroundColor" white="0.64830900489999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fhm-g1-Kx7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <state key="normal" title="Time">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="timeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PIR-Ff-Xcl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-jd-ZWS">
+                                <rect key="frame" x="300" y="480" width="300" height="80"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Urc-ez-EFB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <state key="normal" title="Space">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="spaceButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bvf-k5-K4d"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="URH-hL-jw6" secondAttribute="bottom" id="7VB-5R-r0y"/>
+                            <constraint firstItem="URH-hL-jw6" firstAttribute="top" secondItem="R5J-jd-ZWS" secondAttribute="bottom" id="BfT-vq-AfH"/>
+                            <constraint firstItem="R5J-jd-ZWS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="TH6-8j-UwF"/>
+                            <constraint firstItem="URH-hL-jw6" firstAttribute="top" secondItem="jNg-06-93F" secondAttribute="bottom" id="ZDU-NF-ctQ"/>
+                            <constraint firstItem="jNg-06-93F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZFe-Nn-aey"/>
+                            <constraint firstAttribute="trailing" secondItem="R5J-jd-ZWS" secondAttribute="trailing" id="c6J-vW-Ixn"/>
+                            <constraint firstItem="jNg-06-93F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="er6-V5-FDH"/>
+                            <constraint firstAttribute="trailing" secondItem="URH-hL-jw6" secondAttribute="trailing" id="uHO-qg-3xP"/>
+                            <constraint firstItem="URH-hL-jw6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vyp-A9-fQn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="exploreButton" destination="URH-hL-jw6" id="d9h-2Z-ZN7"/>
+                        <outlet property="spaceButton" destination="R5J-jd-ZWS" id="Tjy-3f-mUC"/>
+                        <outlet property="timeButton" destination="jNg-06-93F" id="bhN-Yj-mZD"/>
+                        <outlet property="timeButtonHeightConstriant" destination="fhm-g1-Kx7" id="fmJ-a3-WEo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
