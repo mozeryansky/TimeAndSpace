@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,11 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URH-hL-jw6">
-                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <color key="backgroundColor" red="0.31443339650000002" green="0.31443339650000002" blue="0.31443339650000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="CMn-l3-z0n"/>
-                                    <constraint firstAttribute="height" constant="40" id="URC-AX-2M4"/>
+                                    <constraint firstAttribute="height" constant="50" id="zdp-Hz-Wmv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <state key="normal" title="Explore">
@@ -34,10 +32,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNg-06-93F">
-                                <rect key="frame" x="0.0" y="480" width="300" height="80"/>
+                                <rect key="frame" x="0.0" y="470" width="300" height="80"/>
                                 <color key="backgroundColor" white="0.64830900489999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="fhm-g1-Kx7"/>
+                                    <constraint firstAttribute="height" constant="80" id="QDL-5V-HjY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <state key="normal" title="Time">
@@ -49,10 +47,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-jd-ZWS">
-                                <rect key="frame" x="300" y="480" width="300" height="80"/>
+                                <rect key="frame" x="300" y="470" width="300" height="80"/>
                                 <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Urc-ez-EFB"/>
+                                    <constraint firstAttribute="height" constant="80" id="fHM-jH-Ofe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <state key="normal" title="Space">
@@ -63,29 +61,66 @@
                                     <action selector="spaceButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bvf-k5-K4d"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="8" translatesAutoresizingMaskIntoConstraints="NO" id="aea-pu-obM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="470"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="T0h-Gf-ZRo">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="470"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="T0h-Gf-ZRo" secondAttribute="trailing" id="8tn-Iz-aSb"/>
+                                    <constraint firstItem="T0h-Gf-ZRo" firstAttribute="centerY" secondItem="aea-pu-obM" secondAttribute="centerY" id="J1d-Wh-gzw"/>
+                                    <constraint firstItem="T0h-Gf-ZRo" firstAttribute="top" secondItem="aea-pu-obM" secondAttribute="top" id="XHe-sm-1hm"/>
+                                    <constraint firstItem="T0h-Gf-ZRo" firstAttribute="leading" secondItem="aea-pu-obM" secondAttribute="leading" id="XPu-ZA-k0K"/>
+                                    <constraint firstAttribute="bottom" secondItem="T0h-Gf-ZRo" secondAttribute="bottom" id="vbV-2a-YYh"/>
+                                    <constraint firstItem="T0h-Gf-ZRo" firstAttribute="centerX" secondItem="aea-pu-obM" secondAttribute="centerX" id="xbC-nA-N7f"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="URH-hL-jw6" secondAttribute="bottom" id="7VB-5R-r0y"/>
-                            <constraint firstItem="URH-hL-jw6" firstAttribute="top" secondItem="R5J-jd-ZWS" secondAttribute="bottom" id="BfT-vq-AfH"/>
-                            <constraint firstItem="R5J-jd-ZWS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="TH6-8j-UwF"/>
-                            <constraint firstItem="URH-hL-jw6" firstAttribute="top" secondItem="jNg-06-93F" secondAttribute="bottom" id="ZDU-NF-ctQ"/>
-                            <constraint firstItem="jNg-06-93F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZFe-Nn-aey"/>
-                            <constraint firstAttribute="trailing" secondItem="R5J-jd-ZWS" secondAttribute="trailing" id="c6J-vW-Ixn"/>
-                            <constraint firstItem="jNg-06-93F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="er6-V5-FDH"/>
-                            <constraint firstAttribute="trailing" secondItem="URH-hL-jw6" secondAttribute="trailing" id="uHO-qg-3xP"/>
-                            <constraint firstItem="URH-hL-jw6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vyp-A9-fQn"/>
+                            <constraint firstItem="aea-pu-obM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4dB-bI-5Ld"/>
+                            <constraint firstItem="URH-hL-jw6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lcq-Ah-P6N"/>
+                            <constraint firstAttribute="trailing" secondItem="aea-pu-obM" secondAttribute="trailing" id="QGX-dX-7TV"/>
+                            <constraint firstItem="jNg-06-93F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sq2-0a-WP0"/>
+                            <constraint firstAttribute="trailing" secondItem="URH-hL-jw6" secondAttribute="trailing" id="SyR-8z-LSo"/>
+                            <constraint firstItem="URH-hL-jw6" firstAttribute="top" secondItem="jNg-06-93F" secondAttribute="bottom" id="Xb1-gZ-gca"/>
+                            <constraint firstAttribute="trailing" secondItem="R5J-jd-ZWS" secondAttribute="trailing" id="YbG-vk-JL8"/>
+                            <constraint firstItem="R5J-jd-ZWS" firstAttribute="leading" secondItem="jNg-06-93F" secondAttribute="trailing" id="dgn-D8-jQm"/>
+                            <constraint firstItem="aea-pu-obM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hO4-a5-tJk"/>
+                            <constraint firstItem="aea-pu-obM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l7J-QE-HPZ"/>
+                            <constraint firstItem="URH-hL-jw6" firstAttribute="top" secondItem="aea-pu-obM" secondAttribute="bottom" constant="80" id="lqK-zA-Jhk"/>
+                            <constraint firstAttribute="trailing" secondItem="aea-pu-obM" secondAttribute="trailing" id="quS-qn-G3M"/>
+                            <constraint firstItem="aea-pu-obM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rGl-vm-Bvh"/>
+                            <constraint firstItem="R5J-jd-ZWS" firstAttribute="width" secondItem="jNg-06-93F" secondAttribute="width" id="tpf-r4-AXr"/>
+                            <constraint firstItem="URH-hL-jw6" firstAttribute="top" secondItem="R5J-jd-ZWS" secondAttribute="bottom" id="ujO-et-6bt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="URH-hL-jw6" secondAttribute="bottom" id="zkG-s0-jVb"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VV2-80-nI9" appends="YES" id="GPk-X6-10H"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="exploreButton" destination="URH-hL-jw6" id="d9h-2Z-ZN7"/>
+                        <outlet property="imageView" destination="T0h-Gf-ZRo" id="vRq-cu-lNq"/>
+                        <outlet property="scrollView" destination="aea-pu-obM" id="pkU-jK-4kX"/>
                         <outlet property="spaceButton" destination="R5J-jd-ZWS" id="Tjy-3f-mUC"/>
                         <outlet property="timeButton" destination="jNg-06-93F" id="bhN-Yj-mZD"/>
-                        <outlet property="timeButtonHeightConstriant" destination="fhm-g1-Kx7" id="fmJ-a3-WEo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="VV2-80-nI9" userLabel="Tap Twice Gesture Recognizer">
+                    <connections>
+                        <action selector="tapTwiceRecognized:" destination="BYZ-38-t0r" id="nQN-ui-rad"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="pic.jpg" width="5472" height="3598"/>
+    </resources>
 </document>
