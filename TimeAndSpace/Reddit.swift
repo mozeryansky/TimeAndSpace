@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//import Alamofire
+import Alamofire
 
 class Reddit {
 
@@ -18,7 +18,6 @@ class Reddit {
     // get
     func addImages() {
         // send request
-        /*
         Alamofire.request(.GET, redditJSON, parameters: ["limit": 50, "after": after])
             .response { (request, response, data, error) in
                 //
@@ -26,6 +25,5 @@ class Reddit {
                 println(response)
                 println(error)
         }
-        */
     }
 }

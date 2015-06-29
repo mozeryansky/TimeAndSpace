@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		905694D8C2C3389604E3EB49 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 642E8A9158791BBD260B51D6 /* libPods.a */; };
+		786EF47CA52EB393CDBCD6FA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F4A5CF575CA3C426D3638B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D1CE44921B3F535A00B706B1 /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1CE44911B3F535A00B706B1 /* pic.jpg */; };
 		D1CE44A01B4113BD00B706B1 /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE449E1B4113BD00B706B1 /* Reddit.swift */; };
 		D1CE44A11B4113BD00B706B1 /* TimeAndSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE449F1B4113BD00B706B1 /* TimeAndSpace.swift */; };
@@ -31,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		3C490C5A1801348642A6B140 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		642E8A9158791BBD260B51D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17773B81B3F480000218FCC /* TimeAndSpace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeAndSpace-Bridging-Header.h"; sourceTree = "<group>"; };
 		D1CE44911B3F535A00B706B1 /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic.jpg; sourceTree = "<group>"; };
 		D1CE449E1B4113BD00B706B1 /* Reddit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		D1E2728A1B3E9969001A921A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E2728B1B3E9969001A921A /* TimeAndSpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndSpaceTests.swift; sourceTree = "<group>"; };
 		DF5BA59DA43D9CCC2E5AD0D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E9F4A5CF575CA3C426D3638B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				905694D8C2C3389604E3EB49 /* libPods.a in Frameworks */,
+				786EF47CA52EB393CDBCD6FA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +90,8 @@
 		D1CE449C1B4113AA00B706B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D1CE449E1B4113BD00B706B1 /* Reddit.swift */,
 				D1CE449F1B4113BD00B706B1 /* TimeAndSpace.swift */,
+				D1CE449E1B4113BD00B706B1 /* Reddit.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 		E4050435EC4C48747C53882D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				642E8A9158791BBD260B51D6 /* libPods.a */,
+				E9F4A5CF575CA3C426D3638B /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,6 +183,7 @@
 				D1E2726D1B3E9969001A921A /* Frameworks */,
 				D1E2726E1B3E9969001A921A /* Resources */,
 				ABCC9BB31E0FF6AFAD96B784 /* Copy Pods Resources */,
+				2787E3ADCA31554D6EA6952E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,6 +271,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2787E3ADCA31554D6EA6952E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5941FCDA7AF55EDFEAFC67FF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
