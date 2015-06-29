@@ -13,26 +13,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 
-        // Create a reference to a Firebase location
-        var ref = Firebase(url:"https://time-and-space.firebaseio.com")
-        
-        ref.authAnonymouslyWithCompletionBlock { (error: NSError!, auth: FAuthData!) -> Void in
+        // Create a reference to a Firebase location        
+        firebaseRef.authAnonymouslyWithCompletionBlock { (error: NSError!, auth: FAuthData!) -> Void in
             println(error);
             println(auth);
         }
         
         // Write data to Firebase
-        ref.setValue("Do you have data? You'll love Firebase.")
+        firebaseRef.setValue("Do you have data? You'll love Firebase.")
         
         // Read data and react to changes
-        ref.observeEventType(.Value, withBlock: {
+        firebaseRef.observeEventType(.Value, withBlock: {
             snapshot in
             println("\(snapshot.key) -> \(snapshot.value)")
         })
+        
+        Reddit().addImages()
         
         return true
     }
@@ -58,7 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

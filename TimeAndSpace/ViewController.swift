@@ -29,14 +29,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // scroll view
         self.scrollView.contentSize = self.imageView.frame.size;
         self.scrollView.delegate = self;
-        
-        // gesture recognizers
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // get next pic
+        
     }
     
     // MARK: - Methods
