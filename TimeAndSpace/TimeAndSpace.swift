@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 let kFirebaseURL = "https://time-and-space.firebaseio.com"
 

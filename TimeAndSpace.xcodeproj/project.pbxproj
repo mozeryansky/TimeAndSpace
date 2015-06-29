@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		905694D8C2C3389604E3EB49 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 642E8A9158791BBD260B51D6 /* libPods.a */; };
 		D1CE44921B3F535A00B706B1 /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1CE44911B3F535A00B706B1 /* pic.jpg */; };
+		D1CE44A01B4113BD00B706B1 /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE449E1B4113BD00B706B1 /* Reddit.swift */; };
+		D1CE44A11B4113BD00B706B1 /* TimeAndSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE449F1B4113BD00B706B1 /* TimeAndSpace.swift */; };
 		D1E272761B3E9969001A921A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E272751B3E9969001A921A /* AppDelegate.swift */; };
 		D1E272781B3E9969001A921A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E272771B3E9969001A921A /* ViewController.swift */; };
 		D1E2727B1B3E9969001A921A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E272791B3E9969001A921A /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		642E8A9158791BBD260B51D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17773B81B3F480000218FCC /* TimeAndSpace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeAndSpace-Bridging-Header.h"; sourceTree = "<group>"; };
 		D1CE44911B3F535A00B706B1 /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic.jpg; sourceTree = "<group>"; };
+		D1CE449E1B4113BD00B706B1 /* Reddit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
+		D1CE449F1B4113BD00B706B1 /* TimeAndSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAndSpace.swift; sourceTree = "<group>"; };
 		D1E272701B3E9969001A921A /* TimeAndSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAndSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E272741B3E9969001A921A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E272751B3E9969001A921A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,23 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		D1CE449C1B4113AA00B706B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1CE449E1B4113BD00B706B1 /* Reddit.swift */,
+				D1CE449F1B4113BD00B706B1 /* TimeAndSpace.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D1CE449D1B4113B000B706B1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1E272771B3E9969001A921A /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		D1E272671B3E9968001A921A = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +129,8 @@
 			children = (
 				D1E272791B3E9969001A921A /* Main.storyboard */,
 				D1E272751B3E9969001A921A /* AppDelegate.swift */,
-				D1E272771B3E9969001A921A /* ViewController.swift */,
+				D1CE449D1B4113B000B706B1 /* View Controllers */,
+				D1CE449C1B4113AA00B706B1 /* Models */,
 				D17773BB1B3F4B9C00218FCC /* Resources */,
 				D1E272731B3E9969001A921A /* Supporting Files */,
 			);
@@ -286,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E272781B3E9969001A921A /* ViewController.swift in Sources */,
+				D1CE44A01B4113BD00B706B1 /* Reddit.swift in Sources */,
 				D1E272761B3E9969001A921A /* AppDelegate.swift in Sources */,
+				D1CE44A11B4113BD00B706B1 /* TimeAndSpace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
