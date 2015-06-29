@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             println("\(snapshot.key) -> \(snapshot.value)")
         })
         
-        Reddit().addImages()
+        Reddit().addNewImages()
         
         return true
     }

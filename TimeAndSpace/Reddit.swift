@@ -16,14 +16,67 @@ class Reddit {
     var after = ""
     
     // get
-    func addImages() {
+    func addNewImages() {
         // send request
         Alamofire.request(.GET, redditJSON, parameters: ["limit": 50, "after": after])
-            .response { (request, response, data, error) in
+            .responseJSON() { (request, response, data, error) in
                 //
-                println(request)
-                println(response)
-                println(error)
+                if error != nil {
+                    println("Reddit::addImages error, \(error)")
+                    return
+                }
+                
+                if let JSON : AnyObject = data {
+                    self.parseRedditJSON(JSON);
+                } else {
+                    println("Reddit::addImages could not get JSON")
+                }
         }
+    }
+    
+    private func parseRedditJSON(JSON : AnyObject) {
+        
+        var imageURLs = [String]()
+        
+        // convert to dictionary
+        if let data = JSON["data"] as? NSDictionary {
+            // update after
+            if let after = data["after"] as? String {
+                self.after = after
+                
+            } else {
+                println("Reddit::parseRedditJSON could not get after, for data: \(data)")
+            }
+            
+            // get children
+            if let children = data["children"] as? [NSDictionary] {
+                // for each children 
+                for child : NSDictionary in children {
+                    // get image url
+                    if let images = child.valueForKeyPath("data.preview.images") as? [NSDictionary] {
+                        // get url
+                        if let url = images.first?.valueForKeyPath("source.url") as? String {
+                            imageURLs.append(url)
+                        } else {
+                            println("Reddit::parseRedditJSON could not get image url for images: \(images)")
+                        }
+                        
+                    } else {
+                        println("Reddit::parseRedditJSON could not get images for url for child: \(child)")
+                    }
+                }
+                
+            } else {
+                println("Reddit::parseRedditJSON could not get children for data: \(data)")
+            }
+        }
+        
+        // add URLs to firebase
+        addUrls(imageURLs)
+    }
+    
+    private func addUrls(urls : [String]) {
+        // add all urls to Firebase
+        println(urls)
     }
 }
